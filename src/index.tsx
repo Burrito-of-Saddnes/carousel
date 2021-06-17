@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import 'css/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'mobx-react'
+import { RootStore } from 'store/RootStore'
+
+declare global {
+  interface Window { rootState: any; }
+}
+
+const ROOT_STORE_INSTANCE = window.rootState = new RootStore()
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider {...ROOT_STORE_INSTANCE}>
+      <App/>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

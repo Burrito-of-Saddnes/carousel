@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .body {
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+}
+
+.imgWrapper1 {
+  height: 100vh;
+  background-color: green;
+}
+
+.imgWrapper2 {
+  height: 100vh;
+  background-color: yellow;
+}
+
+.imgWrapper3 {
+  height: 100vh;
+  background-color: blue;
+}
+
+.imgWrapper4 {
+  height: 100vh;
+  background-color: brown;
+}
+
+.imgWrapper5 {
+  height: 100vh;
+  background-color: black;
+}
+
+::-webkit-scrollbar { width: 0;}
+
